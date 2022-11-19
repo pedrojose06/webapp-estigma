@@ -1,0 +1,7 @@
+{
+  "name": "Estigma",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
