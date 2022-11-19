@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import FolderPage from '@/views/FolderPage.vue'
+import FolderPage from '@/views/private/FolderPage.vue'
 
 describe('FolderPage.vue', () => {
   it('renders folder view', () => {
