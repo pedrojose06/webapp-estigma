@@ -34,7 +34,7 @@
 import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane } from '@ionic/vue';
 import { defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
-import { archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp, chatbubblesOutline, chatbubbleSharp } from 'ionicons/icons';
 
 
 export default defineComponent({
@@ -61,6 +61,12 @@ export default defineComponent({
         url: '/folder/Inbox',
         iosIcon: mailOutline,
         mdIcon: mailSharp
+      },
+      {
+        title: 'Messages',
+        url: '/Messages',
+        iosIcon: chatbubblesOutline,
+        mdIcon: chatbubbleSharp
       },
       {
         title: 'Outbox',
@@ -91,7 +97,7 @@ export default defineComponent({
         url: '/folder/Spam',
         iosIcon: warningOutline,
         mdIcon: warningSharp
-      }
+      },
     ];
     const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 

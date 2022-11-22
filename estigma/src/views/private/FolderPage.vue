@@ -1,13 +1,54 @@
 <template>
-  <pagina-base :tituloPagina= $route.params.id >
-  </pagina-base>
+  <ion-page>
+    <ion-header :translucent="true">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button color="primary"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{ $route.params.id }}</ion-title>
+        <ion-buttons slot="end">
+          <ion-button>
+            <router-link to="/Messages">
+              <ion-icon color="primary" :ios="chatbubblesOutline" :md="chatbubbleSharp"></ion-icon>
+            </router-link>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content :fullscreen="true">
+    </ion-content>
+  </ion-page>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonMenuButton, IonButton, IonIcon } from '@ionic/vue';
+import { chatbubblesOutline, chatbubbleSharp } from 'ionicons/icons';
+
 
 export default defineComponent({
-  name: 'FolderPage',
+    name: 'FolderPage',
+    props:['tituloPagina'],
+    components: {
+        IonContent,
+        IonHeader,
+        IonPage,
+        IonTitle,
+        IonToolbar,
+        IonButtons,
+        IonMenuButton,
+        IonButton,
+        IonIcon,
+    },
+    setup() {
+
+    return {
+        chatbubblesOutline,
+        chatbubbleSharp,
+
+    }
+  }
 });
 </script>
 
